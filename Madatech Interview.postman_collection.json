@@ -164,7 +164,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Tarefa 2\",\r\n    \"description\": \"Criação de tarefa concluída\",\r\n    \"status\": \"concluída\"\r\n}",
+					"raw": "{\r\n    \"title\": \"Tarefa 4\",\r\n    \"description\": \"Criação de tarefa concluída\",\r\n    \"status\": \"concluída\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -241,9 +241,7 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"// Salvar o id da primeira tarefa \r",
-							"var jsonData = pm.response.json();\r",
-							"pm.environment.set(\"task2_id\", jsonData.id);"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
