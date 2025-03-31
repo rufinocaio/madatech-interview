@@ -14,6 +14,6 @@ docker exec -it madatech-interview-app php spark migrate
 ```
 
 A aplicação ficará acessível pelo link localhost:8080.
-Uma aplicação do phpMyAdmin também ficará acessível pelo link localhost:9090.
+Uma aplicação do phpMyAdmin também ficará acessível pelo link localhost:9090, os dados usuário/senha para login no banco de dados são user/madatech.
 
 Há uma coleção do Postman no arquivo 'Madatech Interview.postman_collection.json' para testes da api criada no programa.
