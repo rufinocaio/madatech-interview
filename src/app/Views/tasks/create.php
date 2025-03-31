@@ -32,7 +32,7 @@
                 <label for="status" class="form-label">Status</label>
                 <select class="form-select" id="status" name="status" required>
                     <option value="pendente" selected>Pendente</option>
-                    <option value="em andamento">Em Andamento</option>
+                    <option value="em andamento">Em andamento</option>
                     <option value="concluída">Concluída</option>
                 </select>
                 <?= $validation->getError('status') ?>

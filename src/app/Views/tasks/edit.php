@@ -32,7 +32,7 @@
                 <select class="form-select" id="status" name="status" required>
                     <option value="" disabled>Selecione o status</option>
                     <option value="pendente" <?= ($task['status'] == 'pendente') ? 'selected' : '' ?>>Pendente</option>
-                    <option value="em andamento" <?= ($task['status'] == 'emAndamento') ? 'selected' : '' ?>>Em Andamento</option>
+                    <option value="em andamento" <?= ($task['status'] == 'emAndamento') ? 'selected' : '' ?>>Em andamento</option>
                     <option value="concluída" <?= ($task['status'] == 'concluída') ? 'selected' : '' ?>>Concluída</option>
                 </select>
                 <?= $validation->getError('status') ?>
