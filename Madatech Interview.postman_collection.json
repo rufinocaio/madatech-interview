@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "c672cbdf-5136-4511-9b94-949fe39e51a9",
+		"name": "Madatech Interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43596965"
+	},
+	"item": [
+		{
+			"name": "Listar Tarefas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/index",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Tarefa 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Salvar o id da primeira tarefa \r",
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"task1_id\", jsonData.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tarefa 1\",\r\n    \"description\": \"Teste de criação de tarefa sem status pré selecionado que irá resultar em 'pendente'\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/store",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Tarefa 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Salvar o id da primeira tarefa \r",
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"task2_id\", jsonData.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tarefa 2\",\r\n    \"description\": \"Criação de tarefa pendente\",\r\n    \"status\": \"pendente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/store",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Tarefa 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Salvar o id da primeira tarefa \r",
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"task3_id\", jsonData.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tarefa 3\",\r\n    \"description\": \"Criação de tarefa em andamento\",\r\n    \"status\": \"em andamento\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/store",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Tarefa 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Salvar o id da primeira tarefa \r",
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"task4_id\", jsonData.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tarefa 2\",\r\n    \"description\": \"Criação de tarefa concluída\",\r\n    \"status\": \"concluída\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/store",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Tarefas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/index",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar informações da tarefas 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{task1_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{task1_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar informações da tarefas 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{task2_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{task2_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Tarefa 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Salvar o id da primeira tarefa \r",
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"task2_id\", jsonData.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tarefa 2\",\r\n    \"description\": \"Tarefa 2 editada para concluída\",\r\n    \"status\": \"concluída\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/update/{{task2_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"update",
+						"{{task2_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Tarefa 2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/destroy/{{task2_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"destroy",
+						"{{task2_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Tarefas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/index",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"index"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8080/tasksAPI",
+			"type": "string"
+		}
+	]
+}
